@@ -18,6 +18,28 @@ a {
     text-decoration: none;
 }
 
+.section-desc {
+    margin-top: 20px;
+    color: #51586a;
+    font-size: 1.8rem;
+    line-height: 1.667; /* 166.667% */
+}
+
+.btn {
+    border: none;
+    outline: none;
+    min-width: 170px;
+    height: 62px;
+    background: #5d3bee;
+
+    color: #fdfdfd;
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Header */
 .header {
     padding-top: 20px;
@@ -28,6 +50,7 @@ a {
     position: sticky;
     top: -10px;
     left: 0;
+    z-index: 99;
 }
 
 .header__container {
@@ -55,7 +78,7 @@ a {
     justify-content: center;
     width: 46px;
     height: 46px;
-    border: 1px solid #5d3bee;
+    border: 1px solid #dbd4fc;
     border-radius: 50%;
 }
 
@@ -99,4 +122,111 @@ a {
     padding: 38px 0;
     color: #51586a;
     font-size: 1.8rem;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    padding-top: 70px;
+    background: #fbfaff;
+}
+
+.hero__decor02 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.hero__inner {
+    align-items: center;
+}
+
+.hero__media {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero__img {
+    position: relative;
+    max-width: 100%;
+    z-index: 1;
+}
+
+.hero__img--decor1 {
+    position: absolute;
+    left: -140px;
+    bottom: 0;
+}
+
+.hero__info {
+    margin-top: 95px;
+    max-width: 500px;
+    margin-left: auto;
+}
+
+.hero__heading {
+    color: #080415;
+    font-size: 8rem;
+    font-weight: 500;
+    line-height: 0.95; /* 95% */
+}
+
+.hero__desc {
+    max-width: 370px;
+}
+
+.hero__cta {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.hero__link {
+    position: relative;
+    color: #080415;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.67; /* 166.667% */
+}
+
+.hero__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 6px;
+    height: 2px;
+    background: currentColor;
+}
+
+.hero__socials {
+    margin-top: 104px;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.hero__social--text {
+    color: #51586a;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.88; /* 187.5% */
+}
+
+.social__list {
+    display: flex;
+    column-gap: 20px;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e3e1e8;
+    border-radius: 50%;
 }

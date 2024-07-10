@@ -377,7 +377,7 @@
                                 </div>
                                 <div class="project__media">
                                     <img
-                                        src="./assets/img/project-01.png"
+                                        src="./assets/img/project-02.png"
                                         alt=""
                                         class="project__img"
                                     />
@@ -441,7 +441,7 @@
                                 </div>
                                 <div class="project__media">
                                     <img
-                                        src="./assets/img/project-01.png"
+                                        src="./assets/img/project-04.png"
                                         alt=""
                                         class="project__img"
                                     />
@@ -460,6 +460,111 @@
                     </div>
                 </div>
             </section>
+
+            <!-- About -->
+            <section class="about">
+                <div class="container">
+                    <div class="about__inner">
+                        <div class="row about__top">
+                            <div class="about__highlight">
+                                <p class="about__text">Hey,,,,It’s Arif</p>
+                                <img
+                                    src="./assets/img/icon-hand.png"
+                                    class="about__img--icon"
+                                    alt=""
+                                />
+                            </div>
+                            <h2 class="section-heading">
+                                Interactive Designer
+                            </h2>
+                            <p class="section-desc about__desc">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. In urna, non nisl tincidunt ut
+                                elementum turpis.
+                            </p>
+                        </div>
+                        <div class="about__bottom row">
+                            <div class="col-lg-10 offset-lg-1 about__list">
+                                <div class="about-item">
+                                    <h3
+                                        class="about-item__title section-heading"
+                                    >
+                                        08+
+                                    </h3>
+                                    <p class="section-desc about-item__desc">
+                                        Years Experience
+                                    </p>
+                                </div>
+                                <div class="about-item">
+                                    <h3
+                                        class="about-item__title section-heading"
+                                    >
+                                        21+
+                                    </h3>
+                                    <p class="section-desc about-item__desc">
+                                        Features & Awards
+                                    </p>
+                                </div>
+                                <div class="about-item">
+                                    <h3
+                                        class="about-item__title section-heading"
+                                    >
+                                        97%
+                                    </h3>
+                                    <p class="section-desc about-item__desc">
+                                        Clients Rating
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about__video--wrap">
+                            <video class="about__video" id="aboutVideo">
+                                <source
+                                    src="./assets/videos/Đen - Nấu ăn cho em ft. PiaLinh (M-V).mp4"
+                                    type="video/mp4"
+                                />
+                            </video>
+
+                            <button
+                                class="play-btn"
+                                id="playBtn"
+                                onclick="playVideo()"
+                            >
+                                <img src="./assets/img/play.svg" alt="" />
+                            </button>
+
+                            <button class="about__video--intro btn" id="intro">
+                                Intro Video
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
+        <script>
+            function playVideo() {
+                let playBtn = document.getElementById("playBtn");
+                let video = document.getElementById("aboutVideo");
+                let introText = document.querySelector("#intro");
+
+                // Hiện Controls và phát video
+                video.controls = true;
+                video.play();
+
+                // Ẩn nút và IntroText
+                playBtn.style.display = "none";
+                introText.style.display = "none";
+
+                // Nhận sự kiên pause
+                video.addEventListener("pause", function () {
+                    playBtn.style.display = "block";
+                });
+
+                // Nhận sự kiên play
+                video.addEventListener("play", function () {
+                    playBtn.style.display = "none";
+                });
+            }
+        </script>
     </body>
 </html>

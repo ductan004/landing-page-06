@@ -18,9 +18,17 @@ a {
     text-decoration: none;
 }
 
+input,
+textarea,
+select,
+button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
 .line-clamp {
     display: -webkit-box;
-    -webkit-line-clamp: var(--line-clamp, 2);
+    line-clamp: var(--line-clamp, 2);
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -429,4 +437,119 @@ a {
 .project__bottom {
     margin-top: 80px;
     justify-content: center;
+}
+
+.project__media {
+    overflow: hidden;
+}
+
+.project__img {
+    transition: transform 0.5s ease;
+}
+
+.project__media:hover .project__img {
+    transform: scale(1.2);
+}
+
+/* About */
+
+.about {
+    padding-top: 140px;
+}
+
+.about__inner {
+    position: relative;
+}
+
+.about__top {
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__highlight {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.about__text {
+    color: #5d3bee;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.25; /* 125% */
+}
+
+.about__img--icon {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+.about__desc {
+    text-align: center;
+    margin-top: 15px;
+    max-width: 570px;
+}
+
+.about__bottom {
+    margin: 70px auto;
+}
+
+.about__list {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    border-top: 1px solid #cecdd0;
+    border-bottom: 1px solid #cecdd0;
+}
+
+.about-item__title {
+    letter-spacing: 1.68px;
+    text-decoration-line: underline;
+    line-height: 1.36; /* 135.714% */
+}
+
+.about-item__desc {
+    margin-top: 0;
+}
+
+.about__video--wrap {
+    position: absolute;
+}
+
+.about__video {
+    width: 100%;
+}
+
+.play-btn {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    transition: opacity 0.25s ease;
+}
+
+.play-btn:hover {
+    opacity: 0.7;
+}
+.about__video--intro {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.about__video--intro {
+    background-color: #fff;
+    color: #51586a;
 }

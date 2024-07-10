@@ -18,11 +18,11 @@ a {
     text-decoration: none;
 }
 
-.section-desc {
-    margin-top: 20px;
-    color: #51586a;
-    font-size: 1.8rem;
-    line-height: 1.667; /* 166.667% */
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .btn {
@@ -40,6 +40,24 @@ a {
     justify-content: center;
 }
 
+.section-link {
+    position: relative;
+    color: #080415;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.67; /* 166.667% */
+}
+
+.section-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 6px;
+    height: 2px;
+    background: currentColor;
+}
+
 .section-heading {
     color: #080415;
     font-size: 5.6rem;
@@ -47,6 +65,12 @@ a {
     line-height: 1.18; /* 117.857% */
 }
 
+.section-desc {
+    margin-top: 20px;
+    color: #51586a;
+    font-size: 1.8rem;
+    line-height: 1.667; /* 166.667% */
+}
 .section-title {
     color: #080415;
     font-size: 3.2rem;
@@ -197,24 +221,6 @@ a {
     column-gap: 30px;
 }
 
-.hero__link {
-    position: relative;
-    color: #080415;
-    font-size: 1.8rem;
-    font-weight: 700;
-    line-height: 1.67; /* 166.667% */
-}
-
-.hero__link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 6px;
-    height: 2px;
-    background: currentColor;
-}
-
 .hero__socials {
     margin-top: 104px;
     display: flex;
@@ -344,4 +350,83 @@ a {
 .service-item__desc {
     margin-top: 15px;
     max-width: 285px;
+}
+
+/* Project */
+.project {
+    padding: 86px 0;
+    background: #5d3bee;
+}
+
+.project__top {
+    align-items: center;
+}
+
+.project__heading {
+    color: #fff;
+}
+
+.project__desc {
+    margin-top: 0;
+    color: #cec4fa;
+}
+
+.project__list {
+    margin-top: 70px;
+    row-gap: 30px;
+}
+
+.project-item {
+    position: relative;
+    z-index: 2;
+    padding: 24px;
+    background: #fbfaff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-item__desc {
+    margin-top: 10px;
+    max-width: 220px;
+    font-size: 1.6rem;
+    line-height: 1.44;
+}
+
+.project__link {
+    color: #080415;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.67; /* 166.667% */
+}
+
+.project__link {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.project__link::after {
+    bottom: 6px;
+    height: 1px;
+}
+
+.project__img {
+    max-width: 246px;
+}
+
+.project__img--decor {
+    position: absolute;
+    z-index: -1;
+    right: -13px;
+    bottom: 0;
+}
+
+.project__btn {
+    background: #fff;
+    color: #080415;
+}
+
+.project__bottom {
+    margin-top: 80px;
+    justify-content: center;
 }

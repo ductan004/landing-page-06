@@ -515,6 +515,7 @@ button {
 
 .about__video--wrap {
     position: absolute;
+    z-index: 2;
 }
 
 .about__video {
@@ -552,4 +553,118 @@ button {
 .about__video--intro {
     background-color: #fff;
     color: #51586a;
+}
+
+/* Review */
+
+.review {
+    position: relative;
+    margin-top: 375px;
+    background: #fbfafb;
+}
+
+.review__inner {
+    padding: 473px 0 74px;
+}
+
+.review__content {
+    overflow: hidden;
+}
+
+.review__list {
+    flex-wrap: nowrap;
+}
+
+.review-item {
+    text-align: center;
+}
+
+.review__desc {
+    max-width: 570px;
+    margin: 20px auto 0;
+}
+
+.review__testialmonal {
+    margin-top: 60px;
+    max-width: 679px;
+    margin: 60px auto 0;
+
+    color: #51586a;
+    font-size: 2.4rem;
+    line-height: 1.67; /* 166.667% */
+}
+
+.review__row {
+    margin-top: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 16px;
+}
+
+.review__img--wrap {
+    width: 40px;
+    height: 40px;
+    background: #f29764;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.review__img {
+    width: 100%;
+    margin-top: 6px;
+}
+
+.review__info--name {
+    color: #080415;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.4; /* 133.333% */
+}
+
+.review__info--desc {
+    color: #51586a;
+    font-size: 1.6rem;
+    line-height: 1.8; /* 181.25% */
+}
+
+.review__dots {
+    margin-top: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.review__dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    opacity: 0.2;
+    background: #080415;
+    transition: all 0.25s ease;
+}
+
+.review__dot.review__dot--active,
+.review__dot:hover {
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    border-radius: 20px;
+    border: 1px solid #5d3bee;
+    background: content-box #5d3bee;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.review__decor-01 {
+    position: absolute;
+    bottom: 0;
+    left: -170px;
+}
+
+.review__decor-02 {
+    position: absolute;
+    bottom: 0;
+    right: -1px;
 }

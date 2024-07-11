@@ -666,7 +666,7 @@ button {
 .review__decor-02 {
     position: absolute;
     bottom: 0;
-    right: -1px;
+    right: 0;
 }
 
 /* Faq */
@@ -855,4 +855,63 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.footer {
+    margin-top: 83px;
+}
+
+.footer__inner {
+    position: relative;
+}
+
+.footer__inner::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    bottom: -59px;
+    height: 1px;
+    background: #cecdd2;
+}
+
+.footer__bottom {
+    margin-top: 77px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__bottom--left {
+    color: #525771;
+    font-size: 1.8rem;
+    line-height: 1.67; /* 166.667% */
+}
+
+.footer__bottom--right {
+    display: flex;
+    column-gap: 36px;
+}
+
+.footer__policy,
+.footer__term {
+    color: #525771;
+    font-size: 1.8rem;
+    line-height: 1.67; /* 166.667% */
+}
+
+.footer__policy {
+    position: relative;
+}
+
+.footer__policy::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 18px;
+    rotate: 90deg;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: currentColor;
 }

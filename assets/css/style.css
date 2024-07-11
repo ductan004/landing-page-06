@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -28,7 +33,7 @@ button {
 
 .line-clamp {
     display: -webkit-box;
-    line-clamp: var(--line-clamp, 2);
+    -webkit-line-clamp: var(--line-clamp, 2);
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -46,6 +51,12 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: opacity 0.25s ease;
+}
+
+.btn:hover {
+    opacity: 0.7;
+    cursor: pointer;
 }
 
 .section-link {
@@ -86,6 +97,35 @@ button {
     line-height: 1.25; /* 125% */
 }
 
+.dots {
+    margin-top: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    opacity: 0.2;
+    background: #080415;
+    transition: all 0.25s ease;
+}
+
+.dot.dot--active,
+.dot:hover {
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    border-radius: 20px;
+    border: 1px solid #5d3bee;
+    background: content-box #5d3bee;
+    opacity: 1;
+    cursor: pointer;
+}
+
 /* Header */
 .header {
     padding-top: 20px;
@@ -104,7 +144,8 @@ button {
     margin: 0 auto;
 }
 
-.header__inner {
+.header__inner,
+.footer__inner {
     padding: 10px 0;
     position: relative;
     display: flex;
@@ -112,13 +153,15 @@ button {
     justify-content: space-between;
 }
 
-.header__gmail {
+.header__gmail,
+.footer__gmail {
     display: flex;
     align-items: center;
     column-gap: 10px;
 }
 
-.header__gmail--icon {
+.header__gmail--icon,
+.footer__gmail--icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,11 +171,13 @@ button {
     border-radius: 50%;
 }
 
-.header__gmail--icon img {
+.header__gmail--icon img,
+.footer__gmail--icon img {
     width: 50%;
 }
 
-.header__gmail--text {
+.header__gmail--text,
+.footer__gmail--text {
     position: relative;
     color: #080415;
     font-size: 2.2rem;
@@ -140,7 +185,8 @@ button {
     line-height: 1.36; /* 136.364% */
 }
 
-.header__gmail--text::after {
+.header__gmail--text::after,
+.footer__gmail--text::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -150,7 +196,8 @@ button {
     bottom: 4px;
 }
 
-.header__logo {
+.header__logo,
+.footer__logo {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -159,12 +206,14 @@ button {
     height: 100px;
 }
 
-.header__list {
+.header__list,
+.footer__list {
     display: flex;
     column-gap: 43px;
 }
 
-.header__link {
+.header__link,
+.footer__link {
     padding: 38px 0;
     color: #51586a;
     font-size: 1.8rem;
@@ -180,6 +229,12 @@ button {
 .hero__decor02 {
     position: absolute;
     right: 0;
+    bottom: 0;
+}
+
+.hero__decor01 {
+    position: absolute;
+    left: -200px;
     bottom: 0;
 }
 
@@ -206,6 +261,8 @@ button {
 }
 
 .hero__info {
+    position: relative;
+    z-index: 1;
     margin-top: 95px;
     max-width: 500px;
     margin-left: auto;
@@ -294,7 +351,6 @@ button {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 34px;
-    max-width: 713px;
     margin-left: auto;
 }
 
@@ -402,15 +458,12 @@ button {
 }
 
 .project__link {
+    display: inline-block;
+    margin-top: 20px;
     color: #080415;
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 1.67; /* 166.667% */
-}
-
-.project__link {
-    display: inline-block;
-    margin-top: 20px;
 }
 
 .project__link::after {
@@ -626,35 +679,6 @@ button {
     color: #51586a;
     font-size: 1.6rem;
     line-height: 1.8; /* 181.25% */
-}
-
-.review__dots {
-    margin-top: 42px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 15px;
-}
-
-.review__dot {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    opacity: 0.2;
-    background: #080415;
-    transition: all 0.25s ease;
-}
-
-.review__dot.review__dot--active,
-.review__dot:hover {
-    width: 20px;
-    height: 20px;
-    padding: 4px;
-    border-radius: 20px;
-    border: 1px solid #5d3bee;
-    background: content-box #5d3bee;
-    opacity: 1;
-    cursor: pointer;
 }
 
 .review__decor-01 {

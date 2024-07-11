@@ -34,9 +34,15 @@
             rel="stylesheet"
         />
 
+        <script
+            src="https://kit.fontawesome.com/d7a705b169.js"
+            crossorigin="anonymous"
+        ></script>
+
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/gridSytem.css" />
         <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/reponsive.css" />
     </head>
     <body>
         <!-- Header -->
@@ -47,41 +53,100 @@
                         <div class="header__gmail--icon">
                             <img src="./assets/img/gmail-icon.png" alt="" />
                         </div>
-                        <span class="header__gmail--text">
+                        <div
+                            class="header__gmail--icon hide-on-pc"
+                            id="barMenu"
+                            onclick="openMenu()"
+                        >
+                            <img src="./assets/img/icon-navBar.svg" alt="" />
+                        </div>
+                        <span class="header__gmail--text hide-on-mobile-tablet">
                             hi@arif.interactive
                         </span>
                     </div>
-                    <img
-                        src="./assets/img/Logo.png"
-                        alt=""
-                        class="header__logo"
-                    />
+                    <a href="#home">
+                        <img
+                            src="./assets/img/Logo.png"
+                            alt=""
+                            class="header__logo"
+                        />
+                    </a>
 
-                    <nav class="header__nav">
+                    <nav class="header__nav hide-on-mobile-tablet">
                         <ul class="header__list">
                             <li class="header-item">
-                                <a href="#!" class="header__link">Projects</a>
+                                <a href="#project" class="header__link"
+                                    >Projects</a
+                                >
                             </li>
                             <li class="header-item">
-                                <a href="#!" class="header__link">Journey</a>
+                                <a href="#client" class="header__link"
+                                    >Journey</a
+                                >
                             </li>
                             <li class="header-item">
-                                <a href="#!" class="header__link">Service</a>
+                                <a href="#service" class="header__link"
+                                    >Service</a
+                                >
                             </li>
                             <li class="header-item">
-                                <a href="#!" class="header__link">Contact</a>
+                                <a href="#contact" class="header__link"
+                                    >Contact</a
+                                >
                             </li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </header>
+
+        <!-- Tablet & moblie Header -->
+        <header class="mobile-headder hide-on-pc" id="moblie">
+            <div
+                class="menu-ovelay"
+                id="menu-ovelay"
+                onclick="closeMenu()"
+            ></div>
+            <div class="menu-drawer" id="menu-drawer">
+                <div class="menu-drawer__top">
+                    <a href="#home">
+                        <img
+                            src="./assets/img/Logo.png"
+                            class="logo__moblie"
+                            alt=""
+                        />
+                    </a>
+                    <i
+                        class="fa-regular fa-circle-xmark icon-close"
+                        id="close-menu"
+                        aria-hidden="true"
+                        onclick="closeMenu()"
+                    ></i>
+                </div>
+
+                <ul class="header__list">
+                    <li class="header-item">
+                        <a href="#project" class="header__link">Projects</a>
+                    </li>
+                    <li class="header-item">
+                        <a href="#client" class="header__link">Journey</a>
+                    </li>
+                    <li class="header-item">
+                        <a href="#service" class="header__link">Service</a>
+                    </li>
+                    <li class="header-item">
+                        <a href="#contact" class="header__link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
         <main>
             <!-- Hero -->
-            <section class="hero">
+            <section class="hero" id="home">
                 <div class="container">
                     <div class="row hero__inner">
-                        <div class="col-lg-6 col-md-12">
+                        <div class="col-lg-6 col-md-5 col-12">
                             <div class="hero__media">
                                 <img
                                     src="./assets/img/hero-01.png"
@@ -95,7 +160,7 @@
                                 />
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-12">
+                        <div class="col-lg-6 col-md-6 offset-md-1 offset-lg-0">
                             <div class="hero__info">
                                 <h1 class="hero__heading">
                                     An Interactive Designer
@@ -146,22 +211,27 @@
                 <img
                     src="./assets/img/hero-decor-02.svg"
                     alt=""
-                    class="hero__decor02"
+                    class="hero__decor02 hide-on-mobile-tablet"
+                />
+                <img
+                    src="./assets/img/hero-decor-02.svg"
+                    alt=""
+                    class="hero__decor01 hide-on-mobile-tablet"
                 />
             </section>
 
             <!-- Client -->
-            <section class="client">
+            <section class="client" id="client">
                 <div class="container">
                     <div class="row clinet__inner">
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-12 col-12">
                             <div class="client__info">
                                 <h2 class="client__heading">
                                     Meet my recent clients
                                 </h2>
                             </div>
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-8 col-md-12">
                             <div class="client__list">
                                 <div class="client-item">
                                     <img
@@ -226,7 +296,7 @@
             </section>
 
             <!-- Service -->
-            <section class="service">
+            <section class="service" id="service">
                 <div class="container">
                     <div class="row">
                         <div class="service__top">
@@ -241,8 +311,8 @@
                         </div>
                     </div>
                     <div class="service__list">
-                        <div class="row">
-                            <div class="col-lg-4">
+                        <div class="row service__content">
+                            <div class="col-lg-4 col-md-4 col-12">
                                 <div class="service-item">
                                     <div class="service-item__icon">
                                         <img
@@ -256,7 +326,9 @@
                                     >
                                         Product design
                                     </h3>
-                                    <p class="section-desc service-item__desc">
+                                    <p
+                                        class="section-desc service-item__desc line-clamp-tablet"
+                                    >
                                         Lorem ipsum dolor sit amet, solor
                                         adipiscing elit. Non nisl solor ut
                                         elementum turpis.
@@ -264,7 +336,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 col-md-4 col-12">
                                 <div class="service-item">
                                     <div class="service-item__icon">
                                         <img
@@ -278,7 +350,9 @@
                                     >
                                         UI/UX Design
                                     </h3>
-                                    <p class="section-desc service-item__desc">
+                                    <p
+                                        class="section-desc service-item__desc line-clamp-tablet"
+                                    >
                                         Lorem ipsum dolor sit amet, solor
                                         adipiscing elit. Non nisl solor ut
                                         elementum turpis.
@@ -286,7 +360,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 col-md-4 col-12">
                                 <div class="service-item">
                                     <div class="service-item__icon">
                                         <img
@@ -300,7 +374,9 @@
                                     >
                                         Interactive design
                                     </h3>
-                                    <p class="section-desc service-item__desc">
+                                    <p
+                                        class="section-desc service-item__desc line-clamp-tablet"
+                                    >
                                         Lorem ipsum dolor sit amet, solor
                                         adipiscing elit. Non nisl solor ut
                                         elementum turpis.
@@ -309,19 +385,27 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="dots hide-on-pc service__dots">
+                        <div class="dot"></div>
+                        <div class="dot dot--active"></div>
+                        <div class="dot"></div>
+                    </div>
                 </div>
             </section>
 
             <!-- Project -->
-            <section class="project">
+            <section class="project" id="project">
                 <div class="container">
                     <div class="row project__top">
-                        <h2 class="section-heading project__heading col-lg-5">
+                        <h2
+                            class="section-heading project__heading col-lg-5 col-md-12 col-12"
+                        >
                             Take a look at <br />
                             my recent projects
                         </h2>
                         <p
-                            class="section-desc project__desc col-lg-4 offset-lg-1"
+                            class="section-desc project__desc col-lg-4 offset-lg-1 col-md-12 col-12"
                         >
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. In urna, non nisl tincidunt ut elementum
@@ -330,7 +414,7 @@
                     </div>
 
                     <div class="row project__list">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-md-12 col-12">
                             <div class="project-item">
                                 <div class="project-item__info">
                                     <h3 class="section-title">Wally Website</h3>
@@ -360,7 +444,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-md-12 col-12">
                             <div class="project-item">
                                 <div class="project-item__info">
                                     <h3 class="section-title">Banking App</h3>
@@ -390,7 +474,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-md-12 col-12">
                             <div class="project-item">
                                 <div class="project-item__info">
                                     <h3 class="section-title">Web App</h3>
@@ -420,7 +504,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-md-12 col-12">
                             <div class="project-item">
                                 <div class="project-item__info">
                                     <h3 class="section-title">
@@ -484,7 +568,9 @@
                             </p>
                         </div>
                         <div class="about__bottom row">
-                            <div class="col-lg-10 offset-lg-1 about__list">
+                            <div
+                                class="col-lg-10 offset-lg-1 about__list col-md-12 col-12"
+                            >
                                 <div class="about-item">
                                     <h3
                                         class="about-item__title section-heading"
@@ -548,7 +634,7 @@
                         <div class="review__content">
                             <div class="row review__list">
                                 <!-- Review Item 1 -->
-                                <div class="col-lg-12 review-item">
+                                <div class="col-lg-12 col-12 review-item">
                                     <h2 class="section-heading">
                                         What people says
                                     </h2>
@@ -583,7 +669,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-12 review-item">
+                                <div class="col-lg-12 col-12 review-item">
                                     <h2 class="section-heading">
                                         What people says
                                     </h2>
@@ -618,7 +704,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-12 review-item">
+                                <div class="col-lg-12 col-12 review-item">
                                     <h2 class="section-heading">
                                         What people says
                                     </h2>
@@ -654,12 +740,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="review__dots">
-                            <div class="review__dot review__dot--active"></div>
-                            <div class="review__dot"></div>
-                            <div class="review__dot"></div>
-                            <div class="review__dot"></div>
-                            <div class="review__dot"></div>
+                        <div class="dots">
+                            <div class="dot dot--active"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
                         </div>
                     </div>
                 </div>
@@ -682,7 +768,7 @@
                         A few questions clients normally ask me
                     </h2>
                     <div class="row">
-                        <div class="col-lg-10 faq__list">
+                        <div class="col-lg-10 col-md-12 col-12 faq__list">
                             <div class="faq-item">
                                 <input
                                     type="checkbox"
@@ -868,7 +954,7 @@
                         </div>
                         <div class="gallery__bottom">
                             <div class="row gallery__list">
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 col-md-4 col-12">
                                     <div class="gallery-item">
                                         <img
                                             src="./assets/img/gallert-01.png"
@@ -877,7 +963,7 @@
                                         />
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 col-md-4 col-12">
                                     <div class="gallery-item">
                                         <img
                                             src="./assets/img/gallert-02.png"
@@ -886,7 +972,7 @@
                                         />
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 col-md-4 col-12">
                                     <div class="gallery-item">
                                         <img
                                             src="./assets/img/gallert-03.png"
@@ -896,13 +982,20 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="dots hide-on-pc">
+                                <div class="dot dot--active"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- Contact -->
-            <section class="contact">
+            <section class="contact" id="contact">
                 <div class="container">
                     <div class="contact__inner">
                         <img src="./assets/img/icon-happy.png" alt="" />
@@ -919,12 +1012,12 @@
                         <img
                             src="./assets/img/contact-decor-01.svg"
                             alt=""
-                            class="contact__img--decor01"
+                            class="contact__img--decor01 hide-on-mobile"
                         />
                         <img
                             src="./assets/img/contact-decor-02.svg"
                             alt=""
-                            class="contact__img--decor02"
+                            class="contact__img--decor02 hide-on-mobile"
                         />
                         <img
                             src="./assets/img/contact-decor-03.svg"
@@ -938,34 +1031,34 @@
 
         <footer class="footer">
             <div class="header__container">
-                <div class="header__inner footer__inner">
-                    <div class="header__gmail">
-                        <div class="header__gmail--icon">
+                <div class="footer__inner">
+                    <div class="footer__gmail">
+                        <div class="footer__gmail--icon">
                             <img src="./assets/img/gmail-icon.png" alt="" />
                         </div>
-                        <span class="header__gmail--text">
+                        <span class="footer__gmail--text">
                             hi@arif.interactive
                         </span>
                     </div>
                     <img
                         src="./assets/img/Logo.png"
                         alt=""
-                        class="header__logo footer__logo"
+                        class="footer__logo"
                     />
 
-                    <nav class="header__nav">
-                        <ul class="header__list">
-                            <li class="header-item">
-                                <a href="#!" class="header__link">Projects</a>
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li class="footer-item">
+                                <a href="#!" class="footer__link">Projects</a>
                             </li>
-                            <li class="header-item">
-                                <a href="#!" class="header__link">Journey</a>
+                            <li class="footer-item">
+                                <a href="#!" class="footer__link">Journey</a>
                             </li>
-                            <li class="header-item">
-                                <a href="#!" class="header__link">Service</a>
+                            <li class="footer-item">
+                                <a href="#!" class="footer__link">Service</a>
                             </li>
-                            <li class="header-item">
-                                <a href="#!" class="header__link">Contact</a>
+                            <li class="footer-item">
+                                <a href="#!" class="footer__link">Contact</a>
                             </li>
                         </ul>
                     </nav>
@@ -1007,6 +1100,23 @@
                 video.addEventListener("play", function () {
                     playBtn.style.display = "none";
                 });
+            }
+
+            let menuOverlay = document.querySelector("#menu-ovelay");
+            let menuDrawer = document.querySelector("#menu-drawer");
+            // let barMenu = document.querySelector("#barMenu");
+            // let iconClose = document.querySelector("close-menu");
+
+            function openMenu() {
+                menuOverlay.style.opacity = 1;
+                menuOverlay.style.visibility = "visible";
+                menuDrawer.style.transform = "translateX(0)";
+            }
+
+            function closeMenu() {
+                menuOverlay.style.opacity = 0;
+                menuOverlay.style.visibility = "hidden";
+                menuDrawer.style.transform = "translateX(100%)";
             }
         </script>
     </body>

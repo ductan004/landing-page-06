@@ -668,3 +668,97 @@ button {
     bottom: 0;
     right: -1px;
 }
+
+/* Faq */
+
+.faq {
+    padding-top: 95px;
+}
+
+.faq__heading {
+    color: #080415;
+    max-width: 575px;
+}
+
+.faq__list {
+    margin-top: 80px;
+}
+
+.faq-item {
+    overflow: hidden;
+    padding: 0 0 12px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 2px solid #080415;
+    transition: border-color ease-in 0.5s;
+}
+
+.faq-item + .faq-item {
+    margin-top: 60px;
+}
+
+.faq-item__title {
+    color: #080415;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.25; /* 125% */
+    transition: color ease 0.5s;
+}
+
+.faq-item__desc {
+    margin-top: 23px;
+    max-width: 487px;
+    color: #51586a;
+    font-size: 1.8rem;
+    line-height: 1.67; /* 166.667% */
+
+    height: 0;
+    visibility: hidden;
+
+    transition: height 0.5s ease, visibility 0.5s ease;
+}
+
+.faq-item__btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    background: #fff;
+    border: 1px solid #d0d1d2;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.faq__btn-checked {
+    display: none;
+}
+
+.faq-item:has(.faq__input:checked) {
+    border-color: #5d3bee;
+}
+
+.faq__input:checked ~ .faq-item__content .faq-item__title {
+    color: #5d3bee;
+}
+
+.faq__input:checked ~ .faq-item__content .faq-item__desc {
+    height: 65px;
+    visibility: visible;
+}
+
+.faq__input:checked ~ .faq-item__btn .faq__btn-default {
+    display: none;
+}
+
+.faq__input:checked ~ .faq-item__btn .faq__btn-checked {
+    display: block;
+}
+
+.faq__input:checked ~ .faq-item__btn {
+    border-color: #5d3bee;
+}
